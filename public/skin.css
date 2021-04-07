@@ -1,0 +1,254 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+  background-color: #020d18;
+  color: #526066;
+  font-family: 'Dosis', sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2, h3 {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+/* Layout Styles */
+.l-content {
+  margin: 0 auto;
+}
+
+.l-box {
+  padding: 0.5em 2em;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  position: relative;
+}
+
+.clearfix {
+  position: relative;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.xmenu {
+  float: left;
+  padding-left: 120px;
+}
+
+.xmenuitem {
+  float: left;
+  height: 0px;
+  padding: 25px 15px;
+  line-height: 0px;
+  font-size: 16px;
+  font-weight: 500;  /*font-weight: 400;*/
+}
+
+.xmenuitem:hover {
+  background-color: #dd003f;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.xmenuitem a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.xsearchbar {
+  margin-top: 45px;
+  height: 54px;
+  background-color: #233a4f;
+  border: solid 3px #020d19;
+  margin-bottom: 45px;
+}
+
+.xsearchtype {
+  height: 0px;
+  padding: 25px 42px;
+  line-height: 0px;
+  position: absolute;
+  box-sizing: border-box;
+  border-right: solid 1px #020d1a;
+  color: #abb7c4;
+  font-weight: normal;
+}
+
+.xsearchtext {
+  height: 0px;
+  line-height: 0px;
+  width: 100%;
+  float: left;
+  text-align: left;
+  padding-left: 180px;
+  padding-top: 24px;
+  color: #abb7c4;
+}
+
+.xbody {
+  background-color: #020d18;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* MENU STYLES */
+.pure-menu {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+}
+
+.pure-menu-link {
+  padding: .5em .7em;
+}
+
+.pure-menu-item {
+  height: auto;
+}
+
+/* BANNER */
+.banner-head {
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
+}
+
+/* PRICING */
+.pricing-tables, .information {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.pricing-tables {
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+.pricing-table {
+  border: 1px solid #ddd;
+  margin: 0 0.5em 2em;
+  padding: 0 0 3em;
+}
+
+.pricing-table-free .pricing-table-header {
+  background: #519251;
+}
+
+.pricing-table-biz .pricing-table-header {
+  background: #2c4985;
+}
+
+.pricing-table-header {
+  background: #111;
+  color: #fff;
+}
+
+.pricing-table-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.pricing-table-price {
+  font-size: 6em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
+}
+
+.pricing-table-price span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
+
+.pricing-table-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pricing-table-list li {
+  padding: 0.8em 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.button-choose {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  border-radius: 2em;
+  font-weight: bold;
+  position: relative;
+  bottom: -1.5em;
+}
+
+.information-head {
+  color: black;
+  font-weight: 500;
+}
+
+.footer {
+  background: #111;
+  color: #888;
+  text-align: center;
+}
+
+.footer a {
+  color: #ddd;
+}
+
+/* TABLET */
+@media(min-width:767px) {
+  .banner-head {
+    font-size: 4em;
+  }
+
+  .pricing-table {
+    margin-bottom: 0;
+  }
+
+}
+
+/* PHONE */
+@media (min-width:480px) {
+  .banner {
+    height: 400px;
+  }
+
+  .banner-head {
+    font-size: 3em;
+  }
+
+}

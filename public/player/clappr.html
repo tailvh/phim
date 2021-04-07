@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" charset="utf-8" src="http://flavio.nytimes.com:8080/latest/clappr.js"></script>
+    <title>HLSJS Test Page</title>
+    <script type="text/javascript" charset="utf-8">
+    window.onload = function() {
+    var playerLive = new Clappr.Player({
+    source: "http://srv6.zoeweb.tv:1935/z330-live/stream/playlist.m3u8",
+    parentId: '#player-wrapper-live',
+    autoPlay: true,
+    hideMediaControl: false,
+    width: 426, height: 240,
+    debug: true
+    });
+    var playerVod = new Clappr.Player({
+    source: "https://s3-us-west-2.amazonaws.com/nytimesencoding/output_normalized0000_1_marathon_zombies_hls/video.m3u8",
+    //    source: "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8",
+    parentId: '#player-wrapper-vod',
+    autoPlay: true,
+    hideMediaControl: false,
+    width: 426, height: 240
+    });
+    this.playerDvr = new Clappr.Player({
+    source: "can't reveal this source, add one with playlist bigger than hlsMinimumDvrSize to see dvr working",
+    parentId: '#player-wrapper-dvr',
+    autoPlay: true,
+    hideMediaControl: false,
+    width: 426, height: 240
+    });
+    }
+    </script>
+  </head>
+  <body>
+    live<div id="player-wrapper-live"></div>
+    vod<div id="player-wrapper-vod"></div>
+    dvr<div id="player-wrapper-dvr"></div>
+  </body>
+</html>

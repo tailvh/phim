@@ -1,0 +1,81 @@
+<div class="xbody">
+  <div class="container">
+    <!-- <div class="xbodyplayer" id="xbodyplayer" link="${(film.cdn_internal_url || '').replace('https://xemtv24h.com', 'http://209.97.172.68:1338')}">
+    </div> -->
+    <div class="xbodyplayer" id="xbodyplayer" link="${(film.cdn_internal_url || '').replace('https://xemtv24h.com', 'http://14.225.17.169:8081')}">
+    </div>
+  </div>
+  <div class="xslicedevide"></div>
+  <div class="container">
+    <div class="xbodyleft">
+      <div class="xdetail">
+        <div class="xdetail_img">
+          <img src="${film.preview_thumbnail_url || 'img/films/1.jpg'}" alt="" width="285">
+          <a class="icon-play rxplaystart"></a>
+          <div class="xdetail_play rxplaystart">Xem phim</div>
+        </div>
+        <div class="clearfix">
+          <div class="xdetailtext"><a>${film.name_vi}</a></div>
+          <div class="xdetailtext-sub"><a>${film.name}</a></div>
+        </div>
+        <div class="xdetailinfo clearfix">
+          <!-- <div>Trạng thái : Hoàn tất</div> -->
+          <!-- <div>Điểm AW : 87 (33 votes)</div> -->
+          <!-- <div>Quốc gia : Hàn Quốc,</div> -->
+          <div>Số tập : ${film.episode || 1} / ${film.total_episodes || film.episode}</div>
+          <div>Thời lượng : ${(film.duration || '...').replace('/', ' / ')}</div>
+          <div>Chất lượng : Bản đẹp</div>
+          <div>Độ phân giải : Full HD</div>
+          <div>Ngôn ngữ : Phụ đề Việt</div>
+          <div>Năm : ${film.year}</div>
+          <div>Ngày phát hành : ${film.release_at || '...'}</div>
+          <div>Đạo diễn : ${film.director || '...'}</div>
+          <div>Diễn viên : ${film.star || '...'}</div>
+          <!-- <div>Thể loại : Phim chiến tranh, Phim hình sự, Phim gia đình, Phim lẻ</div> -->
+          <!-- <div>Công ty SX : Chưa rõ</div> -->
+        </div>
+        <div class="xdetailreview">
+          <div>Đánh giá phim (0 lượt)</div>
+          <div class="xdetailreview_rate">★★★★★★★★☆☆</div>
+        </div>
+        <div class="xslicedevide"></div>
+      </div>
+      <div class="xdetailblock">
+        <div class="xdetailblock_item">
+          <div>Chọn tập phim</div>
+          <div class="xdetail_chapters clearfix">
+            ${eps.map(item => `<div class="xdetail_chapter rxplaystart">${item.name}</div>`).join('')}
+          </div>
+        </div>
+        <!-- <div class="xdetailblock_item">
+          <div class="xdetailblock_title">DIỄN VIÊN</div>
+          <div class="xdetailblock_actor"> Park Hae-Soo Lee Chan-Woo Seo Yea-Ji Sung Eun-Young Kim Sang-Ho Park Ki-Hun Kim Eung-Soo Jung Kap-Taek Byun Hee-Bong Baek Young-Kam Kim Young-Jae Choi Ji-Hoon </div>
+        </div> -->
+        <div class="xdetailblock_item">
+          <div class="xdetailblock_title">NỘI DUNG PHIM</div>
+          <div>${film.fdescription}</div>
+        </div>
+        <!-- <div class="xdetailblock_item">
+          <div class="xdetailblock_title">TỪ KHÓA</div>
+          <div>by quantum physics a nightlife venturechuyến phưu lưu ban đêmphiêu lưu cùng vật lý lượng tử.</div>
+        </div>
+        <div class="xdetailblock_item">
+          <div class="xdetailblock_title">CẢNH BÁO</div>
+          <div>Không bấm vào các đường link lạ ở khu vực bình luận. Việc truy cập vào các liên kết lạ ngoài phimmoi.net có thể khiến bạn bị hack tài khoản Facebook.</div>
+        </div> -->
+      </div>
+      <div class="xslicedevide"></div>
+      <div class="clearfix">
+        <div class="xslicetext"><a href="search?type=cartoon">CÓ THỂ BẠN CŨNG MUỐN XEM</a></div>
+        <div class="xsliceview"><a href="search?type=cartoon">Xem thêm ⟶</a></div>
+        <div class="xslice-small">${filmHot.slice(0, 4).map(film => render.film(film)).join('')}</div>
+        <div class="xslice-small">${filmHot.slice(4, 8).map(film => render.film(film)).join('')}</div>
+      </div>
+    </div>
+    ${homeSidebar}
+  </div>
+</div>
+<script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+<script type="text/javascript">/* global jwplayer */ jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="home.js"></script>

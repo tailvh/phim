@@ -1,0 +1,13 @@
+<div class="xbody">
+  <div class="container">
+    <div class="xbodyleft">
+      <div class="clearfix">
+        <div class="xslicetext"><a href="search?type=cinema">KẾT QUẢ TÌM</a></div>
+        <div class="xslice-small">${filmHot.slice(0, 4).map(film => render.film(film)).join('')}</div>
+        <div class="xslice-small">${filmHot.slice(4, 8).map(film => render.film(film)).join('')}</div>
+      </div>
+      <div class="xslicedevide"></div>
+    </div>
+    ${homeSidebar}
+  </div>
+</div>

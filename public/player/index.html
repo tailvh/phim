@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Media Loader</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-control" content="no-cache">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="//ssl.p.jwpcdn.com/player/v/8.7.0/jwplayer.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/p2p-media-loader-core/build/p2p-media-loader-core.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs/build/p2p-media-loader-hlsjs.min.js"></script>
+        <style>
+        .jw-flag-user-inactive .jw-controlbar{ display:none !important; }
+        .jw-display-icon-container { pointer-events: all !important; }
+        #play {
+        background-color: #fff;
+        z-index: 10000;
+        position: absolute;
+        background-color: #fff;
+        border: none;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        left: 50%;
+        margin-left: -40px;
+        bottom: 50%; }
+        /*.jw-icon.jw-icon-display.jw-button-color.jw-reset { background: white; cursor: pointer !important; }*/
+        /* .jw-icon.jw-icon-display.jw-button-color.jw-reset */
+        </style>
+    </head>
+    <body>
+        <!-- <button id='play'>PLAY</button> -->
+        <div class="container"><div id="video_container"></div>
+        <!--script src="js/global.js"></script-->
+        <script src="http://xemtv24h.com/config"></script>
+        <script src="js/customXHR.js"></script>
+        <script src="js/jwplayer.hlsjs.min.js"></script>
+        <script src="js/md5.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>

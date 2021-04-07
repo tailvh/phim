@@ -1,0 +1,8 @@
+{
+  "gg_proxy_link": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604000&url=http://localhost:8080",
+  "port": "8081",
+  "target": "https://xemtv24h.com",  
+  "cache_folder": "/Users/Kiall/google-drive/films",
+  "debug_logging": true,
+  "max_cache_item_size": 10
+}
